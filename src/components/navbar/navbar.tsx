@@ -16,7 +16,6 @@ import {
 	ListItemText,
 } from "@mui/material";
 import { navItems } from "src/config/constants";
-import { ClosedCaption } from "@mui/icons-material";
 import CloseIcon from "@mui/icons-material/Close";
 
 interface Props {
@@ -79,9 +78,9 @@ const Navbar = ({ window }: Props) => {
 
 	return (
 		<Box
-			height={"10vh"}
+			height={'10vh'}
 			sx={{ display: "flex" }}>
-			<AppBar component='nav'>
+			<AppBar component='nav' sx={{ height: "10vh", bgcolor: "#151515" }}>
 				<Toolbar>
 					<IconButton
 						color='inherit'
@@ -98,7 +97,7 @@ const Navbar = ({ window }: Props) => {
 							display={"flex"}
 							alignItems={"center"}
 						>
-							<CastForEducationIcon sx={{ color: "coral", mr: 1 }} /><Typography
+							<CastForEducationIcon sx={{ color: "blue", mr: 1 }} /><Typography
 								variant='h6'
 								alignItems={'center'} display={'flex'}
 							>

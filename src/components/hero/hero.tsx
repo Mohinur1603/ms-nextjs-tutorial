@@ -4,9 +4,9 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { format } from "date-fns"
 
-const data = [
+export const data = [
   {
-    image: 'https://media.graphassets.com/bh3K2NNtTHCN260Xfq9h',
+    image: 'https://assets.publishing.service.gov.uk/government/uploads/system/uploads/image_data/file/85328/s300_skills_gov.uk.jpg',
     title: 'Technical SEO with Hygraph',
     exerpt: 'Get started with your SEO implementation when using a Headless CMS',
     author: {
@@ -42,7 +42,7 @@ const Hero = () => {
           <Box key={item.title}>
             <Box sx={{ position: "relative", width: "100%", height: "70vh" }}>
               <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />
-              <Box sx={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, bgcolor: "rgba(0,0,0,.5)", }}>
+              <Box sx={{ position: "absolute", top: 0, bottom: 0, left: 0, right: 0, bgcolor: "rgba(0,0,0,.6)", }}>
                 <Box
                   width={{ xs: '100%', sm: "100%" }}
                   sx={{ position: "relative", color: "#fff", zIndex: 999, top: "50%", transform: "translateY(-50%)", pl: { xs: "30px", sm: "70px" } }}
@@ -55,11 +55,9 @@ const Hero = () => {
                     <Avatar alt={item.author.name} src={item.author.image} />
                     <Box>
                       <Typography>{item.author.name}</Typography>
+                      <Typography>{format(new Date(), 'dd MMM, yyyy')} • 10min read</Typography>
                     </Box>
-                    <Typography>{format(new Date(), 'dd MMM, yyyy')} • 10min read</Typography>
-
                   </Box>
-
                 </Box>
               </Box>
             </Box>

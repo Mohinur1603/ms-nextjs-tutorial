@@ -1,6 +1,7 @@
 import Layout from 'src/layout/layout'
 import Head from 'next/head'
-import { Hero } from 'src/components'
+import { Content, Hero, Sidebar } from 'src/components'
+import { Stack } from '@mui/material'
 
 
 export default function Home() {
@@ -13,6 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
      <Hero/>
+     <Stack direction={'row'} p={3}>
+      <Sidebar/>
+      <Content/>
+     </Stack>
     </Layout>
   )
 }

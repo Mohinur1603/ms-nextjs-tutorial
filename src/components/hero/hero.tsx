@@ -47,7 +47,7 @@ const Hero = () => {
                   width={{ xs: '100%', sm: "100%" }}
                   sx={{ position: "relative", color: "#fff", zIndex: 999, top: "50%", transform: "translateY(-50%)", pl: { xs: "30px", sm: "70px" } }}
                 >
-                  <Typography variant="h3">{item.title}</Typography>
+                  <Typography sx={{fontSize:{xs:"30px",md:"50px"}}}>{item.title}</Typography>
                   <Typography variant="h6">{item.exerpt}</Typography>
                   <Box
                     display={'flex'} gap={'10px'} alignItems={'center'}
